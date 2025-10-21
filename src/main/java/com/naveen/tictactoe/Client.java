@@ -1,22 +1,22 @@
-package main.java.com.navin.tictactoe;
+package main.java.com.naveen.tictactoe;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import main.java.com.navin.tictactoe.Exceptions.InvalidBotCountException;
-import main.java.com.navin.tictactoe.controller.GameController;
-import main.java.com.navin.tictactoe.enums.BotDifficultyLevel;
-import main.java.com.navin.tictactoe.enums.GameState;
-import main.java.com.navin.tictactoe.enums.PlayerType;
-import main.java.com.navin.tictactoe.model.Bot;
-import main.java.com.navin.tictactoe.model.Game;
-import main.java.com.navin.tictactoe.model.Player;
-import main.java.com.navin.tictactoe.model.Symbol;
-import main.java.com.navin.tictactoe.strategies.ColumnWinningStrategy;
-import main.java.com.navin.tictactoe.strategies.DiagonalWinningStrategy;
-import main.java.com.navin.tictactoe.strategies.RowWinningStrategy;
-import main.java.com.navin.tictactoe.strategies.WinningStrategy;
+import main.java.com.naveen.tictactoe.Exceptions.InvalidBotCountException;
+import main.java.com.naveen.tictactoe.controller.GameController;
+import main.java.com.naveen.tictactoe.enums.BotDifficultyLevel;
+import main.java.com.naveen.tictactoe.enums.GameState;
+import main.java.com.naveen.tictactoe.enums.PlayerType;
+import main.java.com.naveen.tictactoe.model.Bot;
+import main.java.com.naveen.tictactoe.model.Game;
+import main.java.com.naveen.tictactoe.model.Player;
+import main.java.com.naveen.tictactoe.model.Symbol;
+import main.java.com.naveen.tictactoe.strategies.ColumnWinningStrategy;
+import main.java.com.naveen.tictactoe.strategies.DiagonalWinningStrategy;
+import main.java.com.naveen.tictactoe.strategies.RowWinningStrategy;
+import main.java.com.naveen.tictactoe.strategies.WinningStrategy;
 
 public class Client {
     public static void main(String[] args) throws InvalidBotCountException {

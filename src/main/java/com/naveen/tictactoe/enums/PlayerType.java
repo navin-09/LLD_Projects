@@ -1,4 +1,4 @@
-package main.java.com.navin.tictactoe.enums;
+package main.java.com.naveen.tictactoe.enums;
 
 public enum PlayerType {
     HUMAN,

@@ -1,12 +1,12 @@
-package main.java.com.navin.tictactoe.controller;
+package main.java.com.naveen.tictactoe.controller;
 
 import java.util.List;
 
-import main.java.com.navin.tictactoe.Exceptions.InvalidBotCountException;
-import main.java.com.navin.tictactoe.enums.GameState;
-import main.java.com.navin.tictactoe.model.Game;
-import main.java.com.navin.tictactoe.model.Player;
-import main.java.com.navin.tictactoe.strategies.WinningStrategy;
+import main.java.com.naveen.tictactoe.Exceptions.InvalidBotCountException;
+import main.java.com.naveen.tictactoe.enums.GameState;
+import main.java.com.naveen.tictactoe.model.Game;
+import main.java.com.naveen.tictactoe.model.Player;
+import main.java.com.naveen.tictactoe.strategies.WinningStrategy;
 
 public class GameController {
 

@@ -1,4 +1,4 @@
-package main.java.com.navin.tictactoe.model;
+package main.java.com.naveen.tictactoe.model;
 
 public class Move {
 

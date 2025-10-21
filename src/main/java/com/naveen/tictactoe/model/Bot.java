@@ -1,9 +1,9 @@
-package main.java.com.navin.tictactoe.model;
+package main.java.com.naveen.tictactoe.model;
 
-import main.java.com.navin.tictactoe.enums.BotDifficultyLevel;
-import main.java.com.navin.tictactoe.enums.PlayerType;
-import main.java.com.navin.tictactoe.strategies.botPlayingStrategy.BotPlayingStrategy;
-import main.java.com.navin.tictactoe.strategies.botPlayingStrategy.BotPlayingStrategyFactory;
+import main.java.com.naveen.tictactoe.enums.BotDifficultyLevel;
+import main.java.com.naveen.tictactoe.enums.PlayerType;
+import main.java.com.naveen.tictactoe.strategies.botPlayingStrategy.BotPlayingStrategy;
+import main.java.com.naveen.tictactoe.strategies.botPlayingStrategy.BotPlayingStrategyFactory;
 
 public class Bot extends Player {
     private BotDifficultyLevel botDifficultyLevel;

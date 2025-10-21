@@ -1,11 +1,11 @@
-package main.java.com.navin.tictactoe.model;
+package main.java.com.naveen.tictactoe.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.com.navin.tictactoe.enums.CellState;
-import main.java.com.navin.tictactoe.enums.GameState;
-import main.java.com.navin.tictactoe.strategies.WinningStrategy;
+import main.java.com.naveen.tictactoe.enums.CellState;
+import main.java.com.naveen.tictactoe.enums.GameState;
+import main.java.com.naveen.tictactoe.strategies.WinningStrategy;
 
 public class Game {
     private Board board;

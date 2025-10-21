@@ -1,11 +1,11 @@
-package main.java.com.navin.tictactoe.strategies.botPlayingStrategy;
+package main.java.com.naveen.tictactoe.strategies.botPlayingStrategy;
 
 import java.util.List;
 
-import main.java.com.navin.tictactoe.enums.CellState;
-import main.java.com.navin.tictactoe.model.Board;
-import main.java.com.navin.tictactoe.model.Cell;
-import main.java.com.navin.tictactoe.model.Move;
+import main.java.com.naveen.tictactoe.enums.CellState;
+import main.java.com.naveen.tictactoe.model.Board;
+import main.java.com.naveen.tictactoe.model.Cell;
+import main.java.com.naveen.tictactoe.model.Move;
 
 public class EasyBotPlayingStrategy implements BotPlayingStrategy {
 

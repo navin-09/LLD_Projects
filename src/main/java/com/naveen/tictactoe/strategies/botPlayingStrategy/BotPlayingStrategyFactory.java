@@ -1,6 +1,6 @@
-package main.java.com.navin.tictactoe.strategies.botPlayingStrategy;
+package main.java.com.naveen.tictactoe.strategies.botPlayingStrategy;
 
-import main.java.com.navin.tictactoe.enums.BotDifficultyLevel;
+import main.java.com.naveen.tictactoe.enums.BotDifficultyLevel;
 
 public class BotPlayingStrategyFactory {
 

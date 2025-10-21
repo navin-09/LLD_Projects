@@ -1,6 +1,6 @@
-package main.java.com.navin.tictactoe.model;
+package main.java.com.naveen.tictactoe.model;
 
-import main.java.com.navin.tictactoe.enums.CellState;
+import main.java.com.naveen.tictactoe.enums.CellState;
 
 public class Cell {
     private int row;

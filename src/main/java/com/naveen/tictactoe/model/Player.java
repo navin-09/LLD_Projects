@@ -1,8 +1,8 @@
-package main.java.com.navin.tictactoe.model;
+package main.java.com.naveen.tictactoe.model;
 
 import java.util.Scanner;
 
-import main.java.com.navin.tictactoe.enums.PlayerType;
+import main.java.com.naveen.tictactoe.enums.PlayerType;
 
 public class Player {
     private int id;

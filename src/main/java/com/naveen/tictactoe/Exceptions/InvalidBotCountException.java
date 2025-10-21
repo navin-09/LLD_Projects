@@ -1,5 +1,5 @@
 
-package main.java.com.navin.tictactoe.Exceptions;
+package main.java.com.naveen.tictactoe.Exceptions;
 
 public class InvalidBotCountException extends Exception {
 

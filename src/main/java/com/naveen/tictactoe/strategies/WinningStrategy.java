@@ -1,7 +1,7 @@
-package main.java.com.navin.tictactoe.strategies;
+package main.java.com.naveen.tictactoe.strategies;
 
-import main.java.com.navin.tictactoe.model.Board;
-import main.java.com.navin.tictactoe.model.Move;
+import main.java.com.naveen.tictactoe.model.Board;
+import main.java.com.naveen.tictactoe.model.Move;
 
 public interface WinningStrategy {
 
