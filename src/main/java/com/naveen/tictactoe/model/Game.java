@@ -116,7 +116,7 @@ public class Game {
 
         nextPlayerMoveIndex += 1;
         nextPlayerMoveIndex = nextPlayerMoveIndex % players.size();
-
+        System.out.println("done");
         if (checkWinner(board, finalMove)) {
             gameState = GameState.SUCCESS;
             winner = currentPlayer;
