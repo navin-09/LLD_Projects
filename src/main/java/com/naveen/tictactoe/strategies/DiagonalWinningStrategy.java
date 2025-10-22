@@ -1,6 +1,7 @@
 package main.java.com.naveen.tictactoe.strategies;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import main.java.com.naveen.tictactoe.model.Board;
 import main.java.com.naveen.tictactoe.model.Move;
@@ -8,51 +9,47 @@ import main.java.com.naveen.tictactoe.model.Symbol;
 
 public class DiagonalWinningStrategy implements WinningStrategy {
 
-    HashMap<Symbol, Integer> leftDiagonalMapCounts = new HashMap<>();
-    HashMap<Symbol, Integer> rightDiagonalMapCounts = new HashMap<>();
+    private Map<Symbol, Integer> leftDiagonalCounts = new HashMap<>();
+    private Map<Symbol, Integer> rightDiagonalCounts = new HashMap<>();
 
-    // left diagonal -> i == j
-    // right diagonal -> i + j == N - 1
     @Override
     public boolean checkWinner(Move move, Board board) {
+        // left diagonal -> i == j
+        // right diagonal -> i + j == N - 1
         int row = move.getCell().getRow();
         int col = move.getCell().getCol();
         Symbol symbol = move.getPlayer().getSymbol();
 
         if (row == col) {
-            if (!leftDiagonalMapCounts.containsKey(symbol)) {
-                leftDiagonalMapCounts.put(symbol, 0);
-
+            if (!leftDiagonalCounts.containsKey(symbol)) {
+                leftDiagonalCounts.put(symbol, 0);
             }
-            leftDiagonalMapCounts.put(symbol, leftDiagonalMapCounts.get(symbol) + 1);
+            leftDiagonalCounts.put(symbol, leftDiagonalCounts.get(symbol) + 1);
+            if (leftDiagonalCounts.get(symbol) == board.getSize()) {
+                return true;
+            }
         } else if (row + col == board.getSize() - 1) {
-            if (!rightDiagonalMapCounts.containsKey(symbol)) {
-                rightDiagonalMapCounts.put(symbol, 0);
-
+            if (!rightDiagonalCounts.containsKey(symbol)) {
+                rightDiagonalCounts.put(symbol, 0);
             }
-            rightDiagonalMapCounts.put(symbol, rightDiagonalMapCounts.get(symbol) + 1);
+            rightDiagonalCounts.put(symbol, rightDiagonalCounts.get(symbol) + 1);
+            if (rightDiagonalCounts.get(symbol) == board.getSize()) {
+                return true;
+            }
         }
-
-        return leftDiagonalMapCounts.get(symbol) == board.getSize()
-                || rightDiagonalMapCounts.get(symbol) == board.getSize();
-
+        return false;
     }
 
     @Override
-    public void undo(Move move, Board board) {
+    public void handleUndo(Move move, Board board) {
         int row = move.getCell().getRow();
         int col = move.getCell().getCol();
         Symbol symbol = move.getPlayer().getSymbol();
 
         if (row == col) {
-            leftDiagonalMapCounts.put(symbol, leftDiagonalMapCounts.get(symbol) - 1);
-
+            leftDiagonalCounts.put(symbol, leftDiagonalCounts.get(symbol) - 1);
+        } else if (row + col == board.getSize() - 1) {
+            rightDiagonalCounts.put(symbol, rightDiagonalCounts.get(symbol) - 1);
         }
-        if (row + col == board.getSize() - 1) {
-            rightDiagonalMapCounts.put(symbol, rightDiagonalMapCounts.get(symbol) - 1);
-
-        }
-
     }
-
 }

@@ -116,7 +116,7 @@ public class Game {
 
         nextPlayerMoveIndex += 1;
         nextPlayerMoveIndex = nextPlayerMoveIndex % players.size();
-        System.out.println("done");
+
         if (checkWinner(board, finalMove)) {
             gameState = GameState.SUCCESS;
             winner = currentPlayer;
@@ -145,7 +145,7 @@ public class Game {
         nextPlayerMoveIndex = (nextPlayerMoveIndex + players.size()) % players.size();
 
         for (WinningStrategy winningStrategy : winningStrategies) {
-            winningStrategy.undo(move, board);
+            winningStrategy.handleUndo(move, board);
         }
     }
 

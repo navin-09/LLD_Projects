@@ -31,13 +31,12 @@ public class Client {
             players.add(new Player(1, "Naveen", new Symbol('X'), PlayerType.HUMAN));
             players.add(new Bot(2, "Bot", new Symbol('O'), BotDifficultyLevel.EASY));
 
-            List<WinningStrategy> winningStrategies = List.of(new ColumnWinningStrategy(), new RowWinningStrategy(),
-                    new DiagonalWinningStrategy());
+            List<WinningStrategy> winningStrategies = List.of(new ColumnWinningStrategy(), new RowWinningStrategy());
 
             Game game = gameController.startGame(dimensionForGame, players, winningStrategies);
 
             gameController.displayBoard(game);
-
+            
             while (gameController.checkState(game).equals(GameState.IN_PROGRESS)) {
                 gameController.makeMove(game);
                 System.out.println("Do anyone wants to undo ? (y/n)");
@@ -57,7 +56,7 @@ public class Client {
             }
 
         } catch (Exception e) {
-            throw new InvalidBotCountException("can't  create more than one Bot.");
+            throw new InvalidBotCountException("can't  create more than one Bot." + e);
         }
 
     }

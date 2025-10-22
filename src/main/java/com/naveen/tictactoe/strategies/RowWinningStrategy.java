@@ -1,13 +1,14 @@
 package main.java.com.naveen.tictactoe.strategies;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import main.java.com.naveen.tictactoe.model.Board;
 import main.java.com.naveen.tictactoe.model.Move;
 import main.java.com.naveen.tictactoe.model.Symbol;
 
 public class RowWinningStrategy implements WinningStrategy {
-    private final HashMap<Integer, HashMap<Symbol, Integer>> counts = new HashMap<>();
+    private final Map<Integer, HashMap<Symbol, Integer>> counts = new HashMap<>();
 
     @Override
     public boolean checkWinner(Move move, Board board) {
@@ -21,20 +22,18 @@ public class RowWinningStrategy implements WinningStrategy {
         HashMap<Symbol, Integer> rowMap = counts.get(row);
         if (!rowMap.containsKey(symbol)) {
             rowMap.put(symbol, 0);
-
         }
         rowMap.put(symbol, rowMap.get(symbol) + 1);
 
+        // checking the winning condition
         return rowMap.get(symbol) == board.getSize();
-
     }
 
     @Override
-    public void undo(Move move, Board board) {
+    public void handleUndo(Move move, Board board) {
         int row = move.getCell().getRow();
         Symbol symbol = move.getPlayer().getSymbol();
-        HashMap<Symbol, Integer> rowMap = counts.get(row);
+        Map<Symbol, Integer> rowMap = counts.get(row);
         rowMap.put(symbol, rowMap.get(symbol) - 1);
     }
-
 }
