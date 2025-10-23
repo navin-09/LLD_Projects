@@ -1,7 +1,9 @@
-package models;
+package com.navin.bookmyshow.models;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import jakarta.persistence.EntityListeners;
@@ -20,7 +22,11 @@ public class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @CreatedDate
     private Date createdAt;
+
+    @LastModifiedDate
     private Date lastModifiedAt;
 
 }
