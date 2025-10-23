@@ -15,10 +15,10 @@ import lombok.Setter;
 @Setter
 @Entity(name = "shows")
 public class Show extends BaseModel{
-    @ManyToOne
-    private Movie movie;
     private Date startTime;
     private Date endTime;
+    @ManyToOne
+    private Movie movie;
     @ManyToOne
     private Screen screen;
     @Enumerated(EnumType.ORDINAL)
